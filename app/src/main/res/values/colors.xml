@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="colorBorderLightTheme">#FF000000</color>
+    <color name="colorBackgroundLightTheme">#FFFFFFFF</color>
+    <color name="colorBorderDarkTheme">#FFFFFFFF</color>
+    <color name="colorBackgroundDarkTheme">#FF2E3436</color>
+    <color name="colorTextLightTheme">#FF000000</color>
+    <color name="colorTextDarkTheme">#FFFFFFFF</color>
+    <color name="colorAppBarLightTheme">#FF33ff66</color>
+    <color name="colorAppBarDarkTheme">#FF888A85</color>
+    <color name="colorArcOutlineLightTheme">#FFFF0000</color>
+    <color name="colorArcInsideLightTheme">#FF0000FF</color>
+    <color name="colorArcOutlineDarkTheme">#FF33ff66</color>
+    <color name="colorArcInsideDarkTheme">#FFB700FF</color>
+    <color name="colorCoordsLightTheme">#FFF57900</color>
+    <color name="colorCoordsDarkTheme">#FFEDD400</color>
+    <color name="colorRadiansLightTheme">#FFF57900</color>
+    <color name="colorRadiansDarkTheme">#FFEDD400</color>
+</resources>

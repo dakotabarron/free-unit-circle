@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="pref_angle_sign_entries">
+        <item>All positive</item>
+        <item>Top positive; Bottom negative</item>
+        <item>All negative</item>
+    </string-array>
+
+    <string-array name="pref_angle_sign_values">
+        <item>@string/pref_angle_sign_value_all_positive</item>
+        <item>@string/pref_angle_sign_value_split</item>
+        <item>@string/pref_angle_sign_value_all_negative</item>
+    </string-array>
+</resources>

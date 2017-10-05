@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <drawable name="rad_arrow_left_black">@drawable/arrow_black_left</drawable>
+    <drawable name="rad_arrow_left_white">@drawable/arrow_white_left</drawable>
+    <drawable name="rad_arrow_right_black">@drawable/arrow_black_right</drawable>
+    <drawable name="rad_arrow_right_white">@drawable/arrow_white_right</drawable>
+</resources>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+<SwitchPreference
+    android:key="@string/pref_dark_theme_key"
+    android:title="@string/pref_dark_theme_title"
+    android:defaultValue="false"/>
+<ListPreference
+    android:key="@string/pref_angle_sign_key"
+    android:title="@string/pref_angle_sign_title"
+    android:entries="@array/pref_angle_sign_entries"
+    android:entryValues="@array/pref_angle_sign_values"
+    android:dialogTitle="@string/pref_angle_sign_title"
+    android:defaultValue="@string/pref_angle_sign_default"
+    android:summary="%s"/>
+</PreferenceScreen>

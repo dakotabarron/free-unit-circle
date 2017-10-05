@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="buffer_view_weight">3</integer>
+    <integer name="trig_func_neg_sym_weight">1</integer>
+    <integer name="trig_func_text_container_weight">4</integer>
+</resources>
