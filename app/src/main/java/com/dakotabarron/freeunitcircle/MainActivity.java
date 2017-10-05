@@ -109,6 +109,19 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
+    protected void onPause() {
+        super.onPause();
+
+        // make sure the keyboard gets hidden (if showing) in onPause
+
+        InputMethodManager manager =
+                (InputMethodManager) getSystemService(
+                        Context.INPUT_METHOD_SERVICE);
+        manager.hideSoftInputFromWindow(nsvc.getEntryRadians().getWindowToken(),
+                0);
+    }
+
+    @Override
     protected void onStart() {
         super.onStart();
 
@@ -365,10 +378,13 @@ public class MainActivity extends AppCompatActivity {
         nsvc.getEntryRadians().dispatchTouchEvent(me);
 
         // make sure the keyboard shows
+
         InputMethodManager manager =
                 (InputMethodManager) getSystemService(
                         Context.INPUT_METHOD_SERVICE);
+
+        // had to make SHOW_FORCED to work right in landscape (why?)
         manager.showSoftInput(nsvc.getEntryRadians(),
-                InputMethodManager.SHOW_IMPLICIT);
+                InputMethodManager.SHOW_FORCED);
     }
 }

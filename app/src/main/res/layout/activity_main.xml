@@ -126,7 +126,8 @@
                         android:layout_marginRight="@dimen/white_space_around_labels_size"
                         android:layout_marginEnd="@dimen/white_space_around_labels_size"
                         android:visibility="visible"
-                        android:onClick="clickedOnSpecialRadians">
+                        android:onClick="clickedOnSpecialRadians"
+                        >
                         <View
                             android:id="@+id/radianLeftBuffer"
                             android:layout_width="0dp"
