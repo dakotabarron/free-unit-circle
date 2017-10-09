@@ -10,6 +10,7 @@ import android.graphics.RectF;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.util.TypedValue;
 import android.view.Gravity;
@@ -485,15 +486,16 @@ public class WorkerThread extends Thread {
          */
         float r;
 
-        // get values defined in dimens.xml
+        // get stroke widths defined in dimens.xml (adjust them for device-specific density)
         Resources res = context.getResources();
+        DisplayMetrics metrics = res.getDisplayMetrics();
         TypedValue outValue = new TypedValue();
         res.getValue(R.dimen.circle_stroke_width, outValue, true);
-        float circleStrokeWidth = outValue.getFloat();
+        float circleStrokeWidth = outValue.getFloat() * ((float)metrics.densityDpi / DisplayMetrics.DENSITY_DEFAULT);
         res.getValue(R.dimen.axes_stroke_width, outValue, true);
-        float axesStrokeWidth = outValue.getFloat();
+        float axesStrokeWidth = outValue.getFloat() * ((float)metrics.densityDpi / DisplayMetrics.DENSITY_DEFAULT);
         res.getValue(R.dimen.arc_stroke_width, outValue, true);
-        float arcStrokeWidth = outValue.getFloat();
+        float arcStrokeWidth = outValue.getFloat() * ((float)metrics.densityDpi / DisplayMetrics.DENSITY_DEFAULT);
 
         /*
         whichever dimension is smaller determines the radius.
