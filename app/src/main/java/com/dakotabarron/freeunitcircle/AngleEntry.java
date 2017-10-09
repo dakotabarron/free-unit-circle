@@ -28,7 +28,7 @@ public abstract class AngleEntry extends AppCompatEditText {
     private String currentValidText;
 
     // maximum characters that the user can enter
-    private static final int MAX_CHARS_ENTER = 11;
+    private static final int MAX_CHARS_ENTER = WorkerThread.DATA_PRECISION + 4;
 
     private WorkerThread workerThread;
     protected ThreadPassData data;

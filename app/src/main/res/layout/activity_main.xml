@@ -6,7 +6,9 @@
     android:id="@+id/clMainScreenEncompassing"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.dakotabarron.freeunitcircle.MainActivity">
+    tools:context="com.dakotabarron.freeunitcircle.MainActivity"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar_main_activity"
@@ -156,7 +158,7 @@
                                 android:layout_weight="1"
                                 android:text="3π"
                                 android:gravity="center"
-                                android:textSize="@dimen/labels_text_size"/>
+                                android:textSize="@dimen/special_text_size"/>
                             <ImageView
                                 android:id="@+id/radianDivBar"
                                 android:layout_width="match_parent"
@@ -169,7 +171,7 @@
                                 android:layout_weight="1"
                                 android:text="4"
                                 android:gravity="center"
-                                android:textSize="@dimen/labels_text_size"/>
+                                android:textSize="@dimen/special_text_size"/>
                         </LinearLayout>
                         <View
                             android:id="@+id/radianRightBuffer"
@@ -259,7 +261,7 @@
                                 android:layout_weight="1"
                                 android:text="3π"
                                 android:gravity="center"
-                                android:textSize="@dimen/labels_text_size"/>
+                                android:textSize="@dimen/special_text_size"/>
                             <ImageView
                                 android:id="@+id/cosineDivBar"
                                 android:layout_width="match_parent"
@@ -272,7 +274,7 @@
                                 android:layout_weight="1"
                                 android:text="4"
                                 android:gravity="center"
-                                android:textSize="@dimen/labels_text_size"/>
+                                android:textSize="@dimen/special_text_size"/>
                         </LinearLayout>
                         <View
                             android:id="@+id/cosineRightBuffer"
@@ -354,7 +356,7 @@
                                 android:layout_weight="1"
                                 android:text="3π"
                                 android:gravity="center"
-                                android:textSize="@dimen/labels_text_size"/>
+                                android:textSize="@dimen/special_text_size"/>
                             <ImageView
                                 android:id="@+id/sineDivBar"
                                 android:layout_width="match_parent"
@@ -367,7 +369,7 @@
                                 android:layout_weight="1"
                                 android:text="4"
                                 android:gravity="center"
-                                android:textSize="@dimen/labels_text_size"/>
+                                android:textSize="@dimen/special_text_size"/>
                         </LinearLayout>
                         <View
                             android:id="@+id/sineRightBuffer"
@@ -457,7 +459,7 @@
                                 android:layout_weight="1"
                                 android:text="3π"
                                 android:gravity="center"
-                                android:textSize="@dimen/labels_text_size"/>
+                                android:textSize="@dimen/special_text_size"/>
                             <ImageView
                                 android:id="@+id/tangentDivBar"
                                 android:layout_width="match_parent"
@@ -470,7 +472,7 @@
                                 android:layout_weight="1"
                                 android:text="4"
                                 android:gravity="center"
-                                android:textSize="@dimen/labels_text_size"/>
+                                android:textSize="@dimen/special_text_size"/>
                         </LinearLayout>
                         <View
                             android:id="@+id/tangentRightBuffer"

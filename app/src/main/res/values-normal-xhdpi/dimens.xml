@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="labels_text_size">15sp</dimen>
-    <dimen name="special_text_size">15sp</dimen>
+    <dimen name="special_text_size">11.5sp</dimen>
     <dimen name="full_border_width">2dp</dimen>
     <dimen name="half_border_width">1dp</dimen>
-    <dimen name="white_space_around_labels_size">3dp</dimen>
+    <dimen name="white_space_around_labels_size">4dp</dimen>
     <dimen name="padding_around_entire_main_screen">16dp</dimen>
 
     <dimen name="space_between_surfaceview_and_data">32dp</dimen>
@@ -13,11 +13,11 @@
     <dimen name="app_bar_elevation">4dp</dimen>
 
     <dimen name="div_bar_size">2dp</dimen>
-    <dimen name="negative_symbol_size">1dp</dimen>
+    <dimen name="negative_symbol_size">2dp</dimen>
     <dimen name="padding_after_negative_symbol">7dp</dimen>
 
-    <dimen name="padding_between_arrow_and_border">5dp</dimen>
-    <dimen name="padding_added_between_each_arrow">4dp</dimen>
+    <dimen name="padding_between_arrow_and_border">10dp</dimen>
+    <dimen name="padding_added_between_each_arrow">8dp</dimen>
     <dimen name="padding_arrow_top_bottom">2dp</dimen>
 
     <dimen name="space_top_bottom_angle_text">5dp</dimen>

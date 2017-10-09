@@ -7,8 +7,6 @@
     <string name="sine_label">SIN:</string>
     <string name="tangent_label">TAN:</string>
 
-    <string name="labels_text_size">20sp</string>
-
     <string name="action_settings">Settings</string>
     <string name="action_about">About</string>
 

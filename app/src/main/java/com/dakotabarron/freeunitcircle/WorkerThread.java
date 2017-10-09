@@ -38,7 +38,7 @@ public class WorkerThread extends Thread {
     /*
     numbers after decimal point in the text data.
      */
-    private static final int DATA_PRECISION = 7;
+    public static final int DATA_PRECISION = 4;
 
     /*
     format string used when displaying the text data
@@ -282,6 +282,16 @@ public class WorkerThread extends Thread {
                         nsvc.getRadianTextNumerator().setGravity(Gravity.CENTER);
                     }
 
+                    if (nsvc.getRadianDivBar().getVisibility() == View.VISIBLE){
+                        nsvc.getRadianTextNumerator().setTextSize(
+                                TypedValue.COMPLEX_UNIT_PX,
+                                r.getDimension(R.dimen.special_text_size));
+                    } else {
+                        nsvc.getRadianTextNumerator().setTextSize(
+                                TypedValue.COMPLEX_UNIT_PX,
+                                r.getDimension(R.dimen.labels_text_size));
+                    }
+
                     // take care of SIN box
                     if (sa.getDegrees() > 180) {
                         nsvc.getSinDataNegSym().setVisibility(View.VISIBLE);
@@ -301,6 +311,16 @@ public class WorkerThread extends Thread {
                         nsvc.getSineTextNumerator().setGravity(Gravity.CENTER);
                     }
 
+                    if (nsvc.getSineDivBar().getVisibility() == View.VISIBLE){
+                        nsvc.getSineTextNumerator().setTextSize(
+                                TypedValue.COMPLEX_UNIT_PX,
+                                r.getDimension(R.dimen.special_text_size));
+                    } else {
+                        nsvc.getSineTextNumerator().setTextSize(
+                                TypedValue.COMPLEX_UNIT_PX,
+                                r.getDimension(R.dimen.labels_text_size));
+                    }
+
                     // take care of COS box
                     if ((sa.getDegrees() > 90) && (sa.getDegrees() < 270)){
                         nsvc.getCosDataNegSym().setVisibility(View.VISIBLE);
@@ -318,6 +338,16 @@ public class WorkerThread extends Thread {
                                 Gravity.CENTER_VERTICAL);
                     } else {
                         nsvc.getCosineTextNumerator().setGravity(Gravity.CENTER);
+                    }
+
+                    if (nsvc.getCosineDivBar().getVisibility() == View.VISIBLE){
+                        nsvc.getCosineTextNumerator().setTextSize(
+                                TypedValue.COMPLEX_UNIT_PX,
+                                r.getDimension(R.dimen.special_text_size));
+                    } else {
+                        nsvc.getCosineTextNumerator().setTextSize(
+                                TypedValue.COMPLEX_UNIT_PX,
+                                r.getDimension(R.dimen.labels_text_size));
                     }
 
                     // take care of TAN box
@@ -350,6 +380,16 @@ public class WorkerThread extends Thread {
                         } else {
                             nsvc.getTangentTextNumerator().setGravity(Gravity.CENTER);
                         }
+                    }
+
+                    if (nsvc.getTangentDivBar().getVisibility() == View.VISIBLE){
+                        nsvc.getTangentTextNumerator().setTextSize(
+                                TypedValue.COMPLEX_UNIT_PX,
+                                r.getDimension(R.dimen.special_text_size));
+                    } else {
+                        nsvc.getTangentTextNumerator().setTextSize(
+                                TypedValue.COMPLEX_UNIT_PX,
+                                r.getDimension(R.dimen.labels_text_size));
                     }
                 } else {
                     for (View v : nsvc.getAllRegularDataViews()){

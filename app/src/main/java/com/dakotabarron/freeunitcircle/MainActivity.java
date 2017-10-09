@@ -112,7 +112,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onPause() {
         super.onPause();
 
-        // make sure the keyboard gets hidden (if showing) in onPause
+        /*
+        clear the focus so keyboard does not pop up if
+        instance state is restored
+         */
+        nsvc.getEntryDegrees().clearFocus();
+        nsvc.getEntryRadians().clearFocus();
+
+        // make sure the keyboard gets hidden if it is currently showing
 
         InputMethodManager manager =
                 (InputMethodManager) getSystemService(
