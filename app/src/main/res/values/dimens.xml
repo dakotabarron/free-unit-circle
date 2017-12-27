@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="labels_text_size">@dimen/_17ssp</dimen>
+    <dimen name="labels_text_size">@dimen/_16ssp</dimen>
     <dimen name="special_text_size">@dimen/_12ssp</dimen>
     <dimen name="full_border_width">@dimen/_2sdp</dimen>
     <dimen name="half_border_width">@dimen/_1sdp</dimen>
@@ -25,4 +25,12 @@
     <item name="circle_stroke_width" type="dimen" format="float">4.0</item>
     <item name="axes_stroke_width" type="dimen" format="float">4.0</item>
     <item name="arc_stroke_width" type="dimen" format="float">4.0</item>
+
+    <dimen name="space_top_bottom_about_screen_top_title">@dimen/_8sdp</dimen>
+    <dimen name="top_title_text_size">@dimen/_12ssp</dimen>
+    <dimen name="space_rest_about_screen">@dimen/_26sdp</dimen>
+    <dimen name="space_before_after_each_section_title">@dimen/_8sdp</dimen>
+    <dimen name="space_within_each_section">@dimen/_8sdp</dimen>
+    <dimen name="section_title_text_size">@dimen/_20ssp</dimen>
+    <dimen name="within_section_text_size">@dimen/_14ssp</dimen>
 </resources>

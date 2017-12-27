@@ -356,7 +356,7 @@ public class WorkerThread extends Thread {
                         nsvc.getTanDataNegSym().setVisibility(View.GONE);
                         nsvc.getTangentDivBar().setVisibility(View.GONE);
                         nsvc.getTangentTextDenominator().setVisibility(View.GONE);
-                        nsvc.getTangentTextNumerator().setText("N/A");
+                        nsvc.getTangentTextNumerator().setText(r.getString(R.string.tangent_undefined_text));
                     } else {
                         if (nsvc.getCosDataNegSym().getVisibility() !=
                                 nsvc.getSinDataNegSym().getVisibility()){
@@ -407,7 +407,7 @@ public class WorkerThread extends Thread {
                     nsvc.getCosineRegularData().setText(String.format(
                             FORMAT_STRING, cos(theta.getRadiansPositive())));
                     if (!theta.isTangentDefined()){
-                        nsvc.getTangentRegularData().setText("N/A");
+                        nsvc.getTangentRegularData().setText(r.getString(R.string.tangent_undefined_text));
                     } else {
                         nsvc.getTangentRegularData().setText(
                                 String.format(FORMAT_STRING,

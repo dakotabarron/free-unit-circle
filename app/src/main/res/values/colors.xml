@@ -10,14 +10,16 @@
     <color name="colorBackgroundDarkTheme">#FF2E3436</color>
     <color name="colorTextLightTheme">#FF000000</color>
     <color name="colorTextDarkTheme">#FFFFFFFF</color>
-    <color name="colorAppBarLightTheme">#FF33ff66</color>
+    <color name="colorAppBarLightTheme">#FFC3E9FF</color>
     <color name="colorAppBarDarkTheme">#FF888A85</color>
-    <color name="colorArcOutlineLightTheme">#FFFF0000</color>
-    <color name="colorArcInsideLightTheme">#FF0000FF</color>
+    <color name="colorArcOutlineLightTheme">#FFEF2929</color>
+    <color name="colorArcInsideLightTheme">#FF729FCF</color>
     <color name="colorArcOutlineDarkTheme">#FF33ff66</color>
     <color name="colorArcInsideDarkTheme">#FFB700FF</color>
     <color name="colorCoordsLightTheme">#FFF57900</color>
     <color name="colorCoordsDarkTheme">#FFEDD400</color>
     <color name="colorRadiansLightTheme">#FFF57900</color>
     <color name="colorRadiansDarkTheme">#FFEDD400</color>
+    <color name="colorClickLinkLightTheme">#FF1468C2</color>
+    <color name="colorClickLinkDarkTheme">#FFEDD400</color>
 </resources>
