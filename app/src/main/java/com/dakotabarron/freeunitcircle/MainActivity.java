@@ -99,6 +99,7 @@ public class MainActivity extends AppCompatActivity {
 
         nsvc = new NonSurfaceViewContainer();
         setUpNSVC();
+        nsvc.finishSetup();
 
         mySurfaceView = (MySurfaceView)findViewById(R.id.mainSurfaceView);
         mySurfaceView.setNsvcToSendIntoWorkerThread(nsvc);

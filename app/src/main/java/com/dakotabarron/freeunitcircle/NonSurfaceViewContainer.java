@@ -6,6 +6,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -85,6 +87,33 @@ public class NonSurfaceViewContainer {
     private LinearLayout hLLRow4 = null;
     private LinearLayout hLLRow5 = null;
     private LinearLayout hLLRow6 = null;
+
+    /* contains all the Views whose background color needs to be set to the
+     background color appropriate for the current theme */
+    private List<View> allBackgroundColorViews;
+
+    /* contains all the Views whose background color needs to be set to the
+     border color appropriate for the current theme */
+    private List<View> allBorderColorViews;
+
+    /* contains all the Views whose text color should change depending on
+     the current theme */
+    private List<TextView> allViewsToSetTextColor;
+
+    /* contains all the Views which need to be set VISIBLE if
+       the special layouts should be showing (or set to GONE if the regular
+       layout should be showing) */
+    private List<View> allSpecialLayoutViews;
+
+    /* contains all the Views which should be set to VISIBLE if
+       the regular layout should be showing (or set to GONE if the special
+       layout should be showing) */
+    private List<View> allRegularDataViews;
+
+    /* all the views in the Special Layouts whose background colors
+       should be changed to match the current theme (i.e. negative symbol and
+       division bar) */
+    private List<View> allSpecialLayoutViewsToChangeBackgroundColor;
 
     public ConstraintLayout getClMainScreenEncompassing() {
         return clMainScreenEncompassing;
@@ -541,21 +570,60 @@ public class NonSurfaceViewContainer {
     }
 
     /**
+     * this must be called after all of the appropriate setter methods
+     * have been called on this object
+     */
+    public void finishSetup(){
+        setupAllBackgroundColorViews();
+        setupAllBorderColorViews();
+        setupAllViewsToSetTextColor();
+        setupAllSpecialLayoutViews();
+        setupAllRegularDataViews();
+        setupAllSpecialLayoutViewsToChangeBackgroundColor();
+    }
+
+    /**
+     * creates the relevant List object and then adds the
+     * appropriate elements
+     */
+    private void setupAllBackgroundColorViews(){
+        allBackgroundColorViews = new ArrayList<>();
+        allBackgroundColorViews.add(clMainScreenEncompassing);
+        allBackgroundColorViews.add(containerDegrees);
+        allBackgroundColorViews.add(containerRadians);
+        allBackgroundColorViews.add(containerSine);
+        allBackgroundColorViews.add(containerCosine);
+        allBackgroundColorViews.add(containerTangent);
+        allBackgroundColorViews.add(containerRadianControl);
+    }
+
+    /**
      *
      * @return all the Views whose background color needs to be set to the
      * background color appropriate for the current theme
      */
     public List<View> getAllBackgroundColorViews(){
-        ArrayList<View> views = new ArrayList<>();
-        views.add(clMainScreenEncompassing);
-        views.add(containerDegrees);
-        views.add(containerRadians);
-        views.add(containerSine);
-        views.add(containerCosine);
-        views.add(containerTangent);
-        views.add(containerRadianControl);
+        return allBackgroundColorViews;
+    }
 
-        return views;
+    /**
+     * creates the relevant List object and then adds the
+     * appropriate elements
+     */
+    private void setupAllBorderColorViews(){
+        allBorderColorViews = new ArrayList<>();
+
+        allBorderColorViews.add(hLLRow1);
+        allBorderColorViews.add(hLLRow2);
+        allBorderColorViews.add(hLLRow3);
+
+        if (hLLRow4 != null){
+            allBorderColorViews.add(hLLRow4);
+
+            // if hLLRow4 is not null, we assume 5 and 6 aren't either
+            allBorderColorViews.add(hLLRow5);
+            allBorderColorViews.add(hLLRow6);
+        }
     }
 
     /**
@@ -564,19 +632,33 @@ public class NonSurfaceViewContainer {
      * border color appropriate for the current theme
      */
     public List<View> getAllBorderColorViews(){
-        ArrayList<View> views = new ArrayList<>();
-        views.add(hLLRow1);
-        views.add(hLLRow2);
-        views.add(hLLRow3);
+        return allBorderColorViews;
+    }
 
-        if (hLLRow4 != null){
-            views.add(hLLRow4);
-            // if hLLRow4 is not null, we assume 5 and 6 aren't either
-            views.add(hLLRow5);
-            views.add(hLLRow6);
-        }
-
-        return views;
+    /**
+     * creates the relevant List object and then adds the
+     * appropriate elements
+     */
+    private void setupAllViewsToSetTextColor(){
+        allViewsToSetTextColor = new ArrayList<>();
+        allViewsToSetTextColor.add(labelDegrees);
+        allViewsToSetTextColor.add(entryDegrees);
+        allViewsToSetTextColor.add(labelRadians);
+        allViewsToSetTextColor.add(entryRadians);
+        allViewsToSetTextColor.add(labelSine);
+        allViewsToSetTextColor.add(sineRegularData);
+        allViewsToSetTextColor.add(labelCosine);
+        allViewsToSetTextColor.add(cosineRegularData);
+        allViewsToSetTextColor.add(labelTangent);
+        allViewsToSetTextColor.add(tangentRegularData);
+        allViewsToSetTextColor.add(radianTextNumerator);
+        allViewsToSetTextColor.add(radianTextDenominator);
+        allViewsToSetTextColor.add(sineTextNumerator);
+        allViewsToSetTextColor.add(sineTextDenominator);
+        allViewsToSetTextColor.add(cosineTextNumerator);
+        allViewsToSetTextColor.add(cosineTextDenominator);
+        allViewsToSetTextColor.add(tangentTextNumerator);
+        allViewsToSetTextColor.add(tangentTextDenominator);
     }
 
     /**
@@ -585,28 +667,27 @@ public class NonSurfaceViewContainer {
      * the current theme
      */
     public List<TextView> getAllViewsToSetTextColor(){
-        // TODO improve performance by making these arrays only created once
-        ArrayList<TextView> views = new ArrayList<>();
-        views.add(labelDegrees);
-        views.add(entryDegrees);
-        views.add(labelRadians);
-        views.add(entryRadians);
-        views.add(labelSine);
-        views.add(sineRegularData);
-        views.add(labelCosine);
-        views.add(cosineRegularData);
-        views.add(labelTangent);
-        views.add(tangentRegularData);
-        views.add(radianTextNumerator);
-        views.add(radianTextDenominator);
-        views.add(sineTextNumerator);
-        views.add(sineTextDenominator);
-        views.add(cosineTextNumerator);
-        views.add(cosineTextDenominator);
-        views.add(tangentTextNumerator);
-        views.add(tangentTextDenominator);
+        return allViewsToSetTextColor;
+    }
 
-        return views;
+    /**
+     * creates the relevant List object and then adds the
+     * appropriate elements
+     */
+    private void setupAllSpecialLayoutViews(){
+        allSpecialLayoutViews = new ArrayList<>();
+        allSpecialLayoutViews.add(radianSpecialLayout);
+        allSpecialLayoutViews.add(sineSpecialLayout);
+        allSpecialLayoutViews.add(cosineSpecialLayout);
+        allSpecialLayoutViews.add(tangentSpecialLayout);
+        allSpecialLayoutViews.add(radianDivBar);
+        allSpecialLayoutViews.add(radianTextDenominator);
+        allSpecialLayoutViews.add(sineDivBar);
+        allSpecialLayoutViews.add(sineTextDenominator);
+        allSpecialLayoutViews.add(cosineDivBar);
+        allSpecialLayoutViews.add(cosineTextDenominator);
+        allSpecialLayoutViews.add(tangentDivBar);
+        allSpecialLayoutViews.add(tangentTextDenominator);
     }
 
     /**
@@ -615,20 +696,19 @@ public class NonSurfaceViewContainer {
      * layout should be showing)
      */
     public List<View> getAllSpecialLayoutViews(){
-        ArrayList<View> views = new ArrayList<>();
-        views.add(radianSpecialLayout);
-        views.add(sineSpecialLayout);
-        views.add(cosineSpecialLayout);
-        views.add(tangentSpecialLayout);
-        views.add(radianDivBar);
-        views.add(radianTextDenominator);
-        views.add(sineDivBar);
-        views.add(sineTextDenominator);
-        views.add(cosineDivBar);
-        views.add(cosineTextDenominator);
-        views.add(tangentDivBar);
-        views.add(tangentTextDenominator);
-        return views;
+        return allSpecialLayoutViews;
+    }
+
+    /**
+     * creates the relevant List object and then adds the
+     * appropriate elements
+     */
+    private void setupAllRegularDataViews(){
+        allRegularDataViews = new ArrayList<>();
+        allRegularDataViews.add(entryRadians);
+        allRegularDataViews.add(sineRegularData);
+        allRegularDataViews.add(cosineRegularData);
+        allRegularDataViews.add(tangentRegularData);
     }
 
     /**
@@ -637,13 +717,23 @@ public class NonSurfaceViewContainer {
      * layout should be showing)
      */
     public List<View> getAllRegularDataViews(){
-        ArrayList<View> views = new ArrayList<>();
-        views.add(entryRadians);
-        views.add(sineRegularData);
-        views.add(cosineRegularData);
-        views.add(tangentRegularData);
+        return allRegularDataViews;
+    }
 
-        return views;
+    /**
+     * creates the relevant List object and then adds the
+     * appropriate elements
+     */
+    private void setupAllSpecialLayoutViewsToChangeBackgroundColor(){
+        allSpecialLayoutViewsToChangeBackgroundColor = new ArrayList<>();
+        allSpecialLayoutViewsToChangeBackgroundColor.add(radianDataNegSym);
+        allSpecialLayoutViewsToChangeBackgroundColor.add(radianDivBar);
+        allSpecialLayoutViewsToChangeBackgroundColor.add(cosDataNegSym);
+        allSpecialLayoutViewsToChangeBackgroundColor.add(cosineDivBar);
+        allSpecialLayoutViewsToChangeBackgroundColor.add(sinDataNegSym);
+        allSpecialLayoutViewsToChangeBackgroundColor.add(sineDivBar);
+        allSpecialLayoutViewsToChangeBackgroundColor.add(tanDataNegSym);
+        allSpecialLayoutViewsToChangeBackgroundColor.add(tangentDivBar);
     }
 
     /**
@@ -653,17 +743,6 @@ public class NonSurfaceViewContainer {
      * division bar)
      */
     public List<View> getAllSpecialLayoutViewsToChangeBackgroundColor(){
-        ArrayList<View> views = new ArrayList<>();
-
-        views.add(radianDataNegSym);
-        views.add(radianDivBar);
-        views.add(cosDataNegSym);
-        views.add(cosineDivBar);
-        views.add(sinDataNegSym);
-        views.add(sineDivBar);
-        views.add(tanDataNegSym);
-        views.add(tangentDivBar);
-
-        return views;
+        return allSpecialLayoutViewsToChangeBackgroundColor;
     }
 }
