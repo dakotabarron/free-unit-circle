@@ -12,6 +12,8 @@ import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.inputmethod.EditorInfo;
 
+import java.util.Locale;
+
 /**
  * superclass of the EditTexts which the user will use to enter
  * radian and degree angle values. Had to subclass EditText itself to
@@ -237,7 +239,8 @@ public abstract class AngleEntry extends AppCompatEditText {
                 up as when WorkerThread updates the text data
                  */
                 userEntry = Double.parseDouble(
-                        String.format(WorkerThread.FORMAT_STRING, userEntry));
+                        String.format(Locale.US, WorkerThread.FORMAT_STRING,
+                                userEntry));
                 if (userEntry >= getMinAcceptableValue() &&
                         userEntry <= getMaxAcceptableValue()){
                     /*

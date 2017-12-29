@@ -29,7 +29,7 @@ import android.widget.TextView;
 import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
-
+    // TODO get rid of all Log messages???git
     private MySurfaceView mySurfaceView;
     private NonSurfaceViewContainer nsvc;
     private ThreadPassData tpd;

@@ -223,8 +223,6 @@ public class Theta {
         this.tangentDefined = other.tangentDefined;
         this.isSpecialAngle = other.isSpecialAngle;
         this.valueOfSpecialAngle = other.valueOfSpecialAngle;
-
-        // TODO make sure all fields are included above if you add any more
     }
 
     /**

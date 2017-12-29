@@ -179,16 +179,16 @@ public class WorkerThread extends Thread {
                 will work correctly in the AngleEntry.
                  */
                 nsvc.getEntryDegrees().setCurrentValidText(
-                        String.format(" " + FORMAT_STRING,
+                        String.format(Locale.US, " " + FORMAT_STRING,
                                 degreesToShow));
                 nsvc.getEntryDegrees().setText(
-                        String.format(" " + FORMAT_STRING,
+                        String.format(Locale.US, " " + FORMAT_STRING,
                                 degreesToShow));
-                nsvc.getEntryRadians().setCurrentValidText( //TODO does locale matter?
-                        String.format(" " + FORMAT_STRING,
+                nsvc.getEntryRadians().setCurrentValidText(
+                        String.format(Locale.US, " " + FORMAT_STRING,
                                 radiansToShow));
                 nsvc.getEntryRadians().setText(
-                        String.format(" " + FORMAT_STRING,
+                        String.format(Locale.US, " " + FORMAT_STRING,
                                 radiansToShow));
 
                 if (theta.isSpecialAngle()){
@@ -403,14 +403,16 @@ public class WorkerThread extends Thread {
                     nsvc.getEntryRadians().setWasSpecialLayoutShowing(false);
 
                     nsvc.getSineRegularData().setText(String.format(
-                            FORMAT_STRING, sin(theta.getRadiansPositive())));
+                            Locale.US, FORMAT_STRING,
+                            sin(theta.getRadiansPositive())));
                     nsvc.getCosineRegularData().setText(String.format(
-                            FORMAT_STRING, cos(theta.getRadiansPositive())));
+                            Locale.US, FORMAT_STRING,
+                            cos(theta.getRadiansPositive())));
                     if (!theta.isTangentDefined()){
                         nsvc.getTangentRegularData().setText(r.getString(R.string.tangent_undefined_text));
                     } else {
                         nsvc.getTangentRegularData().setText(
-                                String.format(FORMAT_STRING,
+                                String.format(Locale.US, FORMAT_STRING,
                                         tan(theta.getRadiansPositive())));
                     }
                 }
@@ -466,7 +468,14 @@ public class WorkerThread extends Thread {
      */
     private Theta redraw(){
         Canvas c = sh.lockCanvas();
-        // TODO c could be null from above
+
+        if (c == null) {
+            /*
+            if for some reason we cannot obtain the Canvas,
+            just return the last drawn Theta
+             */
+            return lastDrawnArcTheta;
+        }
 
         Log.d(MySurfaceView.DEBUG_TAG, "canvas width: " + c.getWidth() +
                 ", canvas height: " + c.getHeight());
