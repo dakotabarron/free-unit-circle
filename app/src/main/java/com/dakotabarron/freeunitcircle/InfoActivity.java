@@ -1,9 +1,11 @@
 package com.dakotabarron.freeunitcircle;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
@@ -40,22 +42,47 @@ public class InfoActivity extends AppCompatActivity {
             sv.setBackgroundColor(getResources().getColor(R.color.colorBackgroundLightTheme));
         }
 
-        LinearLayout tvc = (LinearLayout)findViewById(R.id.textViewContainer);
+        LinearLayout vc = (LinearLayout)findViewById(R.id.viewContainer);
 
-        for (int j = 0; j < tvc.getChildCount(); ++j){
-            if (MainActivity.darkTheme){
-                ((TextView)(tvc.getChildAt(j))).setTextColor(getResources().getColor(R.color.colorTextDarkTheme));
-            } else {
-                ((TextView)(tvc.getChildAt(j))).setTextColor(getResources().getColor(R.color.colorTextLightTheme));
+        for (int j = 0; j < vc.getChildCount(); ++j){
+            if (vc.getChildAt(j) instanceof Button){
+                Button button = (Button)vc.getChildAt(j);
+                if (MainActivity.darkTheme){
+                    button.setBackgroundDrawable(getResources().getDrawable(R.drawable.info_button_background_dark_theme));
+                    button.setTextColor(getResources().getColor(R.color.colorButtonTextDarkTheme));
+                } else {
+                    button.setBackgroundDrawable(getResources().getDrawable(R.drawable.info_button_background_light_theme));
+                    button.setTextColor(getResources().getColor(R.color.colorButtonTextLightTheme));
+                }
+            }
+            else {
+                if (MainActivity.darkTheme){
+                    ((TextView)(vc.getChildAt(j))).setTextColor(getResources().getColor(R.color.colorTextDarkTheme));
+                } else {
+                    ((TextView)(vc.getChildAt(j))).setTextColor(getResources().getColor(R.color.colorTextLightTheme));
+                }
             }
         }
+    }
 
-        TextView thirdParty = (TextView)findViewById(R.id.third_party_click);
+    public void viewLicense(View v){
+        Intent intent = new Intent(this, LicenseActivity.class);
+        startActivity(intent);
+    }
 
-        if (MainActivity.darkTheme){
-            thirdParty.setTextColor(getResources().getColor(R.color.colorClickLinkDarkTheme));
-        } else {
-            thirdParty.setTextColor(getResources().getColor(R.color.colorClickLinkLightTheme));
+    public void goToDeveloperWebsite(View v){
+        Uri webpage = Uri.parse(getResources().getString(R.string.developer_website_link));
+        Intent intent = new Intent(Intent.ACTION_VIEW, webpage);
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(intent);
+        }
+    }
+
+    public void viewSourceCode(View v){
+        Uri webpage = Uri.parse(getResources().getString(R.string.source_code_link));
+        Intent intent = new Intent(Intent.ACTION_VIEW, webpage);
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(intent);
         }
     }
 

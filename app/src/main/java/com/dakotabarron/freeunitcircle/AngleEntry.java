@@ -4,7 +4,6 @@ import android.content.Context;
 import android.graphics.Rect;
 import android.support.v7.widget.AppCompatEditText;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.ActionMode;
 import android.view.KeyEvent;
 import android.view.Menu;
@@ -220,7 +219,6 @@ public abstract class AngleEntry extends AppCompatEditText {
                 try {
                     userEntry = Double.parseDouble(getText().toString());
                 } catch (Exception ex){
-                    Log.d(DEBUG_TAG, ex.getMessage());
                     // problem parsing user input, just restore currentValidText
                     setText(currentValidText);
 
@@ -275,7 +273,6 @@ public abstract class AngleEntry extends AppCompatEditText {
          */
         if (keyCode == KeyEvent.KEYCODE_BACK &&
                 event.getAction() == KeyEvent.ACTION_UP){
-            Log.d(MainActivity.DEBUG_TAG, "BACK");
             setText(currentValidText);
 
             if (this instanceof RadianEntry){

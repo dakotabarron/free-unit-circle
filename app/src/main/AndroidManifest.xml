@@ -22,6 +22,8 @@
         </activity>
         <activity android:name=".ThirdPartyLicensesActivity">
         </activity>
+        <activity android:name=".LicenseActivity">
+        </activity>
     </application>
 
 </manifest>

@@ -11,7 +11,6 @@ import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
 import android.util.DisplayMetrics;
-import android.util.Log;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.SurfaceHolder;
@@ -442,16 +441,12 @@ public class WorkerThread extends Thread {
 
         while(true){
             try{
-                Log.d(MySurfaceView.DEBUG_TAG, "redraw Thread will now wait");
                 wait();
             } catch (InterruptedException ex){
-                Log.d(MySurfaceView.DEBUG_TAG, "interrupted");
-
                 // just return when interrupted
                 return;
             }
 
-            Log.d(MySurfaceView.DEBUG_TAG, "redraw");
             Theta theta = redraw();
 
             // send data to UI thread to update the text info
@@ -477,9 +472,6 @@ public class WorkerThread extends Thread {
             return lastDrawnArcTheta;
         }
 
-        Log.d(MySurfaceView.DEBUG_TAG, "canvas width: " + c.getWidth() +
-                ", canvas height: " + c.getHeight());
-
         blankWholeCanvas(c);
 
         int cHeight = c.getHeight();
@@ -487,8 +479,6 @@ public class WorkerThread extends Thread {
 
         float centerX = cWidth / 2f;
         float centerY = cHeight / 2f;
-
-        Log.d(MySurfaceView.DEBUG_TAG, "origin: (" + centerX + ", " + centerY + ")");
 
         /*
         radius of the circle.

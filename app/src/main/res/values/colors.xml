@@ -20,6 +20,10 @@
     <color name="colorCoordsDarkTheme">#FFEDD400</color>
     <color name="colorRadiansLightTheme">#FFF57900</color>
     <color name="colorRadiansDarkTheme">#FFEDD400</color>
-    <color name="colorClickLinkLightTheme">#FF1468C2</color>
-    <color name="colorClickLinkDarkTheme">#FFEDD400</color>
+    <color name="colorButtonNotPressedLightTheme">#FF729FCF</color>
+    <color name="colorButtonPressedLightTheme">#FF3465A4</color>
+    <color name="colorButtonTextLightTheme">#FFFFFFFF</color>
+    <color name="colorButtonNotPressedDarkTheme">#FFFCE94F</color>
+    <color name="colorButtonPressedDarkTheme">#FFEDD400</color>
+    <color name="colorButtonTextDarkTheme">#FF000000</color>
 </resources>

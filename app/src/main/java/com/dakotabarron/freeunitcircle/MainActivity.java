@@ -14,7 +14,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.text.Html;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -29,7 +28,6 @@ import android.widget.TextView;
 import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
-    // TODO get rid of all Log messages???git
     private MySurfaceView mySurfaceView;
     private NonSurfaceViewContainer nsvc;
     private ThreadPassData tpd;
@@ -256,15 +254,12 @@ public class MainActivity extends AppCompatActivity {
 
         View test = findViewById(R.id.hLLRow4);
         if (test != null){
-            Log.d(DEBUG_TAG, "row 4 not null");
             nsvc.sethLLRow4((LinearLayout)test);
 
             // if row 4 is present, then we assume 5 and 6 are as well
 
             nsvc.sethLLRow5((LinearLayout)findViewById(R.id.hLLRow5));
             nsvc.sethLLRow6((LinearLayout)findViewById(R.id.hLLRow6));
-        } else {
-            Log.d(DEBUG_TAG, "row 4 null");
         }
     }
 

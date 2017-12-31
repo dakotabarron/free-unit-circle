@@ -27,7 +27,7 @@
     <string name="pref_angle_sign_value_all_negative">all_negative</string>
     <string name="pref_angle_sign_default">@string/pref_angle_sign_value_all_positive</string>
 
-    <string name="about_screen_line_2">Copyright \u00A9 2017, Dakota Barron</string>
+    <string name="copyright_free_unit_circle">Copyright \u00A9 2017, Dakota Barron</string>
 
     <string name="title_changing_angle_value">Changing Angle Value</string>
     <string name="changing_angle_value_1">There are several ways by which you can change the angle value currently showing on the unit circle:</string>
@@ -46,53 +46,33 @@
     <string name="changing_angle_sign_6">"<b>All negative:</b> all angles\' degree and radian values will be shown as negative sign"</string>
 
     <string name="title_about">About</string>
-    <string name="about_1">Developed on the Debian operating system</string>
-    <string name="about_2">"For questions, bug reports, and support please contact: drb@dakotabarron.com"</string>
+    <string name="license_button_text">License</string>
+    <string name="about_2">This application was developed on the Debian operating system</string>
+    <string name="about_3">"For questions, bug reports, and support please contact: drb@dakotabarron.com"</string>
 
     <string name="title_third_party">Third Party Software</string>
     <string name="third_party_1">Free Unit Circle uses the following third party software:</string>
     <string name="third_party_2">"<b>sdp</b> copyright \u00A9 Intuit Inc., licensed under the MIT license"</string>
     <string name="third_party_3">"<b>ssp</b> copyright \u00A9 Intuit Inc., licensed under the MIT license"</string>
-    <string name="third_party_click_here">Click here to view third party licenses</string>
+    <string name="third_party_button_text">Third party software</string>
     <string name="version">Version 1.0</string>
 
     <string name="third_party_top_bar_line_2">Third Party Software Licenses</string>
     <string name="third_party_disclosure">Free Unit Circle uses the following third party software:</string>
     <string name="sdp_title">sdp</string>
-    <string name="sdp_text_1">MIT license</string>
-    <string name="sdp_text_2">Copyright &#169; 2013 &#8211; 2015 Intuit Inc.</string>
-    <string name="sdp_text_3">Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:</string>
-    <string name="sdp_text_4">The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.</string>
-    <string name="sdp_text_5">THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.</string>
+    <string name="MIT_title">MIT License</string>
+    <string name="sdp_copyright">Copyright &#169; 2013 &#8211; 2015 Intuit Inc.</string>
+
+    <string name="MIT_text">"Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the &#34;Software&#34;), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED &#34;AS IS&#34;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."</string>
 
     <string name="ssp_title">ssp</string>
-    <string name="ssp_text_1">MIT license</string>
-    <string name="ssp_text_2">Copyright &#169; 2013 &#8211; 2015 Intuit Inc.</string>
-    <string name="ssp_text_3">Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:</string>
-    <string name="ssp_text_4">The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.</string>
-    <string name="ssp_text_5">THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.</string>
+    <string name="ssp_copyright">Copyright &#169; 2013 &#8211; 2015 Intuit Inc.</string>
+
+    <string name="license_top_bar_line_2">License Information</string>
+
+    <string name="source_code_button_text">Source Code</string>
+    <string name="source_code_link">https://github.com/dakotabarron</string>
+
+    <string name="developer_website_button_text">Developer Website</string>
+    <string name="developer_website_link">http://dakotabarron.com</string>
 </resources>

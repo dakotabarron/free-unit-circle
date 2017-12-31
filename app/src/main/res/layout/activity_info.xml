@@ -33,7 +33,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/about_screen_line_2"
+            android:text="@string/copyright_free_unit_circle"
             android:gravity="center"
             android:textSize="@dimen/top_title_text_size"
             android:textColor="@color/colorTextLightTheme"
@@ -53,7 +53,7 @@
         android:paddingRight="@dimen/space_rest_about_screen">
 
         <LinearLayout
-            android:id="@+id/textViewContainer"
+            android:id="@+id/viewContainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -171,30 +171,55 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/about_1"
-                android:textSize="@dimen/within_section_text_size"
-                android:layout_marginBottom="@dimen/space_within_each_section"
-                android:textColor="@color/colorTextLightTheme"
-                android:gravity="center"
-                />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:text="@string/about_2"
                 android:textSize="@dimen/within_section_text_size"
-                android:textColor="@color/colorTextLightTheme"
                 android:layout_marginBottom="@dimen/space_within_each_section"
+                android:textColor="@color/colorTextLightTheme"
                 android:gravity="center"
                 />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/third_party_click"
-                android:text="@string/third_party_click_here"
+                android:text="@string/about_3"
                 android:textSize="@dimen/within_section_text_size"
                 android:textColor="@color/colorTextLightTheme"
-                android:onClick="viewThirdPartyLicenses"
+                android:layout_marginBottom="@dimen/space_within_each_section"
                 android:gravity="center"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/license_button"
+                android:text="@string/license_button_text"
+                android:layout_marginBottom="@dimen/space_within_each_section"
+                android:background="@drawable/info_button_background_light_theme"
+                android:onClick="viewLicense"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/developer_website_button"
+                android:text="@string/developer_website_button_text"
+                android:layout_marginBottom="@dimen/space_within_each_section"
+                android:background="@drawable/info_button_background_light_theme"
+                android:onClick="goToDeveloperWebsite"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/source_code_button"
+                android:text="@string/source_code_button_text"
+                android:layout_marginBottom="@dimen/space_within_each_section"
+                android:background="@drawable/info_button_background_light_theme"
+                android:onClick="viewSourceCode"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/third_party_button"
+                android:text="@string/third_party_button_text"
+                android:onClick="viewThirdPartyLicenses"
+                android:background="@drawable/info_button_background_light_theme"
                 />
             <TextView
                 android:layout_width="match_parent"

@@ -2,7 +2,6 @@ package com.dakotabarron.freeunitcircle;
 
 import android.content.Context;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.view.SurfaceView;
 import android.view.SurfaceHolder;
@@ -53,7 +52,6 @@ class MySurfaceView extends SurfaceView implements SurfaceHolder.Callback {
 
         // start the redraw thread (thread responsible for drawing the surface)
         workerThread.start();
-        Log.d(DEBUG_TAG, "surface created");
 
         /*
          make sure redraw thread is waiting before surfaceChanged()
@@ -70,16 +68,12 @@ class MySurfaceView extends SurfaceView implements SurfaceHolder.Callback {
     @Override
     public void surfaceChanged(SurfaceHolder surfaceHolder,
                                int i, int i1, int i2) {
-        Log.d(DEBUG_TAG, "surface changed");
-
         // wake up the redraw thread so it will redraw the surface
         workerThread.wakeUp();
     }
 
     @Override
     public void surfaceDestroyed(SurfaceHolder surfaceHolder) {
-        Log.d(DEBUG_TAG, "surface destroyed");
-
         workerThread.interrupt();
     }
 
@@ -97,7 +91,6 @@ class MySurfaceView extends SurfaceView implements SurfaceHolder.Callback {
                 if (nsvcToSendIntoWorkerThread.getEntryDegrees().isBeingEdited()
                         || nsvcToSendIntoWorkerThread.getEntryRadians()
                         .isBeingEdited()){
-                    Log.d(DEBUG_TAG, "editing");
                     return true;
                 }
 
