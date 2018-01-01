@@ -194,6 +194,7 @@
                 android:layout_marginBottom="@dimen/space_within_each_section"
                 android:background="@drawable/info_button_background_light_theme"
                 android:onClick="viewLicense"
+                android:textSize="@dimen/within_section_text_size"
                 />
             <Button
                 android:layout_width="match_parent"
@@ -203,6 +204,7 @@
                 android:layout_marginBottom="@dimen/space_within_each_section"
                 android:background="@drawable/info_button_background_light_theme"
                 android:onClick="goToDeveloperWebsite"
+                android:textSize="@dimen/within_section_text_size"
                 />
             <Button
                 android:layout_width="match_parent"
@@ -212,6 +214,7 @@
                 android:layout_marginBottom="@dimen/space_within_each_section"
                 android:background="@drawable/info_button_background_light_theme"
                 android:onClick="viewSourceCode"
+                android:textSize="@dimen/within_section_text_size"
                 />
             <Button
                 android:layout_width="match_parent"
@@ -220,6 +223,7 @@
                 android:text="@string/third_party_button_text"
                 android:onClick="viewThirdPartyLicenses"
                 android:background="@drawable/info_button_background_light_theme"
+                android:textSize="@dimen/within_section_text_size"
                 />
             <TextView
                 android:layout_width="match_parent"

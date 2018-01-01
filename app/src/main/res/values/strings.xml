@@ -36,14 +36,13 @@
     <string name="changing_angle_value_4">3. Tap on the left/right arrows to cycle through common \"special angles\" whose radian values are expressed in terms of \u03C0</string>
 
     <string name="title_changing_angle_sign">Changing Sign of Angles</string>
-    <string name="changing_angle_sign_1">By default, all angle values are shown as positive sign. For example, the positive value 330 degrees will show instead of
-        its negative equivalent of -30 degrees</string>
-    <string name="changing_angle_sign_2">If you would prefer that some or all angles show their negative values instead of the positive values, you can go back to the
+    <string name="changing_angle_sign_1">By default, all angles are represented by values in the range 0 to 360 degrees and 0 to 2\u03C0 radians. For example, the value 330 degrees will be shown instead of -30 degrees (the value of the coterminal angle)</string>
+    <string name="changing_angle_sign_2">If you would prefer that some or all angles be represented by a negative coterminal instead of the default positive value, you can go back to the
     main screen and click on the settings icon in the top right of the toolbar. You can then change the angle sign setting by clicking on \"Sign of angles\" in the settings menu</string>
     <string name="changing_angle_sign_3">Within the angle sign settings menu, you will have the following options:</string>
-    <string name="changing_angle_sign_4">"<b>All positive:</b> all angles\' degree and radian values will be shown as positive sign (this is the default)"</string>
-    <string name="changing_angle_sign_5">"<b>Top positive; Bottom negative:</b> angles with degree value between 0&#8211;180 (top half of unit circle) will show as positive sign and angles with degree value greater than 180 (bottom half of unit circle) will show as negative sign"</string>
-    <string name="changing_angle_sign_6">"<b>All negative:</b> all angles\' degree and radian values will be shown as negative sign"</string>
+    <string name="changing_angle_sign_4">"<b>All positive:</b> all angles\' degree and radian values will be represented in the range: 0 to 360 and 0 to 2\u03C0, respectively (this is the default)"</string>
+    <string name="changing_angle_sign_5">"<b>Top positive; Bottom negative:</b> angles of the top half of the unit circle will be represented by degree and radian values in the range: 0 to 180 and 0 to \u03C0, respectively. Angles of the bottom half of the unit circle will be represented by degree and radian values in the range: -180 to 0 and -\u03C0 to 0, respectively"</string>
+    <string name="changing_angle_sign_6">"<b>All negative:</b> all angles\' degree and radian values will be represented in the range: -360 to 0 and -2\u03C0 to 0, respectively"</string>
 
     <string name="title_about">About</string>
     <string name="license_button_text">License</string>
